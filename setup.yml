@@ -1,9 +1,6 @@
 ---
 - hosts: flaskapp_nodes
   become: yes
-  # vars: 
-  #   APP_REPO: https://github.com/mbruzda/CeneoScrapper.git
-  #   APP_NAME: ceneoscrapper
   vars: 
     APP_REPO: "{{ lookup('env','APP_REPO') }}"
     APP_NAME: "{{ lookup('env','APP_NAME') }}"
